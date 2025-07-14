@@ -1,6 +1,6 @@
-# My React Website
+# My Website
 
-A modern React website built with Vite for fast development and optimized production builds.
+My own website to introduce myself - A modern React website built with Vite for fast development and optimized production builds.
 
 ## Features
 
