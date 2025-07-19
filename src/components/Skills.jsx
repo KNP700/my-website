@@ -4,29 +4,34 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
+      isLearning: true,
       skills: [
         { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "React", level: 80 },
-        { name: "Vue.js", level: 70 }
+        { name: "JavaScript", level: 50 },
+        { name: "React", level: 40 },
+        { name: "Typescript", level: 30 }
       ]
     },
     {
       title: "Backend",
+      isLearning: true,
       skills: [
-        { name: "Node.js", level: 75 },
-        { name: "Python", level: 80 },
-        { name: "PHP", level: 70 },
-        { name: "MongoDB", level: 65 }
+        ,
+        { name: "Python", level: 50 },
+        { name: "PHP", level: 20 },
+        { name: "MYSQL", level: 60 },
+        { name: "Node.js", level: 30 },
+        { name: "Java", level: 35 }
       ]
     },
     {
       title: "Tools & Others",
       skills: [
-        { name: "Git", level: 85 },
-        { name: "Figma", level: 75 },
-        { name: "Photoshop", level: 70 },
-        { name: "WordPress", level: 80 }
+        { name: "Git", level: 70 },
+        { name: "Figma", level: 90 },
+        { name: "Photoshop", level: 60 },
+        { name: "WordPress", level: 40 },
+        { name:"Adobe After Effects", level: 85}
       ]
     }
   ]
@@ -41,8 +46,15 @@ const Skills = () => {
         
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3>{category.title}</h3>
+            <div key={index} className={`skill-category ${category.isLearning ? 'learning' : ''}`}>
+              <div className="skill-category-header">
+                <h3>
+                  {category.title}
+                  {category.isLearning && (
+                    <span className="learning-badge">still learning</span>
+                  )}
+                </h3>
+              </div>
               <div className="skill-list">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="skill-item">

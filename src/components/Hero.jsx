@@ -5,11 +5,10 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Hello, I'm <span className="highlight">Your Name</span></h1>
-          <h2>Web Developer & Designer</h2>
-          <p>
-            I create beautiful and functional websites that provide amazing user experiences.
-            Welcome to my digital portfolio where creativity meets functionality.
+          <h1>Hello, I'm <span className="highlight">Kaveen Perera</span></h1>
+          <h2>Web Developer & Designer </h2>
+          
+          <p> Coding Automation & Beyond Constantly learning, exploring, and solving—bridging creativity and technology through hands-on experience
           </p>
           <div className="hero-buttons">
             <button 
@@ -28,7 +27,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <div className="profile-image">
-            <img src="/api/placeholder/300/300" alt="Your Name" />
+            <img src="/IMG-20250712-WA0023.jpg" alt="Kaveen Perera" />
           </div>
         </div>
       </div>

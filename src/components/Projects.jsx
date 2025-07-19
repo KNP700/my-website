@@ -4,10 +4,10 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Website",
-      description: "A modern e-commerce platform with shopping cart functionality, user authentication, and payment integration.",
+      title: "Chrome Extension For youtube",
+      description: "Chrome extension that summerize video, Genarate real time quizes from that video and there is a AI bot to ask any question about that video",
       image: "/api/placeholder/400/250",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["Vite", "Node.js", "MongoDB"],
       githubLink: "https://github.com/yourusername/ecommerce-project",
       liveLink: "https://your-ecommerce-demo.com"
     },

@@ -15,7 +15,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <div className="nav-brand">
-          <h2>Your Name</h2>
+          <h2>@Kaveen Nimsara Perera</h2>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
