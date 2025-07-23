@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ScrollAnimation from './ScrollAnimation'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,13 +27,16 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="section-subtitle">
+        <ScrollAnimation animation="scroll-animate">
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="section-subtitle">
            Send me a message and I'll respond as soon as possible.
-        </p>
+          </p>
+        </ScrollAnimation>
         
         <div className="contact-content">
-          <div className="contact-info">
+          <ScrollAnimation animation="scroll-animate-left">
+            <div className="contact-info">
             <div className="contact-item">
               <div className="contact-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -110,9 +114,11 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollAnimation>
           
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <ScrollAnimation animation="scroll-animate-right">
+            <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 type="text"
@@ -158,7 +164,8 @@ const Contact = () => {
             </div>
             
             <button type="submit" className="btn primary">Send Message</button>
-          </form>
+            </form>
+          </ScrollAnimation>
         </div>
       </div>
     </section>

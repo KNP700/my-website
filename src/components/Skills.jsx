@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollAnimation from './ScrollAnimation'
 
 const Skills = () => {
   const skillCategories = [
@@ -39,14 +40,20 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2 className="section-title">My Skills</h2>
-        <p className="section-subtitle">
-          Here are some of the technologies and tools I work with
-        </p>
+        <ScrollAnimation animation="scroll-animate">
+          <h2 className="section-title">My Skills</h2>
+          <p className="section-subtitle">
+            Here are some of the technologies and tools I work with
+          </p>
+        </ScrollAnimation>
         
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`skill-category ${category.isLearning ? 'learning' : ''}`}>
+            <ScrollAnimation 
+              key={index} 
+              animation="scroll-animate-stagger"
+              className={`skill-category ${category.isLearning ? 'learning' : ''}`}
+            >
               <div className="skill-category-header">
                 <h3>
                   {category.title}
@@ -71,7 +78,7 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

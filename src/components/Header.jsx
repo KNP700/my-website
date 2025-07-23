@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,6 +25,7 @@ const Header = () => {
           <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
           <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
           <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+          <ThemeToggle />
         </div>
 
         <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>

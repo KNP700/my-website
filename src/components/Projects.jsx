@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollAnimation from './ScrollAnimation'
 
 const Projects = () => {
   const projects = [
@@ -25,14 +26,20 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="section-title">My Projects</h2>
-        <p className="section-subtitle">
-          Here are some of the projects I've worked on recently
-        </p>
+        <ScrollAnimation animation="scroll-animate">
+          <h2 className="section-title">My Projects</h2>
+          <p className="section-subtitle">
+            Here are some of the projects I've worked on recently
+          </p>
+        </ScrollAnimation>
         
         <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
+          {projects.map((project, index) => (
+            <ScrollAnimation 
+              key={project.id} 
+              animation="scroll-animate-stagger"
+              className="project-card"
+            >
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
               </div>
@@ -47,7 +54,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>
