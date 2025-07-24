@@ -1,12 +1,28 @@
 import React from 'react'
+import useTypewriter from '../hooks/useTypewriter'
 
 const Hero = () => {
+  const titles = [
+    'Web Developer',
+    'Designer', 
+    'Innovator',
+    'Explorer',
+    'Video Editor'
+  ]
+  
+  const { text: dynamicText, isComplete } = useTypewriter(titles, 150, 2000)
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
         <div className="hero-text">
           <h1>Hello, I'm <span className="highlight">Kaveen Perera</span></h1>
-          <h2>Web Developer & Designer </h2>
+          <div className="typewriter-container">
+            <h2>
+              <span className={`dynamic-text ${isComplete ? 'complete' : ''}`}>{dynamicText}</span>
+              <span className="cursor">|</span>
+            </h2>
+          </div>
           
           <p> Coding Automation & Beyond Constantly learning, exploring, and solving—bridging creativity and technology through hands-on experience
           </p>
