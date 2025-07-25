@@ -14,7 +14,7 @@ const Projects = () => {
       id: 2,
       title: "Cogni website",
       description: "Website for cogni chrome extension",
-      image: "/cogni-logo.png",
+      image: "/vite.svg",
       technologies: [ "CSS", "JavaScript"],
       liveLink: "https://cogni.lk"
     },

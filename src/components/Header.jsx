@@ -24,6 +24,7 @@ const Header = () => {
           <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
           <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
           <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
+          <button onClick={() => scrollToSection('education')} className="nav-link">Education</button>
           <button onClick={() => scrollToSection('resume')} className="nav-link">Resume</button>
           <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
           <ThemeToggle />
