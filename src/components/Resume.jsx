@@ -22,7 +22,7 @@ const Resume = () => {
         <ScrollAnimation animation="scroll-animate">
           <h2 className="section-title">My Resume</h2>
           <p className="section-subtitle">
-            Download or view my complete CV to learn more about my experience and qualifications
+            CV will be available soon. Please check back later or contact me for more information.
           </p>
         </ScrollAnimation>
         
@@ -50,6 +50,8 @@ const Resume = () => {
               </div>
             </div>
             
+            {/* Temporarily disabled CV download and view buttons */}
+            {/*
             <div className="resume-actions">
               <button onClick={handleDownload} className="btn primary resume-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -67,6 +69,11 @@ const Resume = () => {
                 </svg>
                 View Online
               </button>
+            </div>
+            */}
+            
+            <div className="resume-notice">
+              <p><strong>Note:</strong> CV will be made available soon. Feel free to contact me for any inquiries.</p>
             </div>
           </ScrollAnimation>
           
