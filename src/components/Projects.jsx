@@ -5,20 +5,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "RepairME",
+      description: "repaireME is a location-based app that connects stranded drivers with nearby garages, enabling real-time repair requests and navigation support for garage personnel to reach and assist on-site",
+      image: "https://via.placeholder.com/400x250/2563eb/ffffff?text=RepairME",
+      technologies: ["React", "Node.js", "Express", "MongoDB"]
+    },
+    {
+      id: 2,
       title: "Chrome Extension For youtube",
       description: "Chrome extension that summerize video, Genarate real time quizes from that video and there is a AI bot to ask any question about that video",
       image: "/api/placeholder/400/250",
       technologies: ["Vite", "Node.js", "MongoDB"]
     },
     {
-      id: 2,
+      id: 3,
       title: "Cogni website",
       description: "Website for cogni chrome extension",
       image: "/vite.svg",
       technologies: [ "CSS", "JavaScript"],
       liveLink: "https://cogni.lk"
-    },
-    
+    }
   ]
 
   return (
@@ -38,7 +44,8 @@ const Projects = () => {
               animation="scroll-animate-stagger"
               className="project-card"
             >
-              {project.image && !project.image.includes('logo') && (
+              {/* Always show the main image if provided */}
+              {project.image && (
                 <div className="project-image">
                   <img 
                     src={project.image} 
@@ -53,20 +60,6 @@ const Projects = () => {
               <div className="project-content">
                 <div className="project-title-container">
                   <h3>{project.title}</h3>
-                  {project.image && project.image.includes('logo') && (
-                    <img 
-                      src={project.image} 
-                      alt={`${project.title} logo`}
-                      className="project-logo"
-                      onError={(e) => {
-                        console.log('Logo failed to load:', e.target.src);
-                        e.target.style.display = 'none';
-                      }}
-                      onLoad={(e) => {
-                        console.log('Logo loaded successfully:', e.target.src);
-                      }}
-                    />
-                  )}
                 </div>
                 <p>{project.description}</p>
                 
